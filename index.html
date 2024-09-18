@@ -3,16 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet" />
     
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
-    <h1 class="text-3xl flex font-bold content-auto bg-slate-900">
-      Hello world!
-    </h1>
-    <div class="text-white h-24 bg-red-900 font-bold justify-center items-center">
-   Equipter Form
+    <header></header>
+    <main>
+      <div class="p-9 md:p-8 w-full build-form">
+        <div class="max-w-lg mx-auto font-work-sans px-1">
+        <h2 class="text-3xl font-semibold text-custom-gray text-center uppercase mb-4">Let's Get Started</h2>
+        <p class=" mb-5 text-center text-custom-gray">Fill out the form below to start building your perfect Equipter.</p>
+        <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="mb-4">
+              <label for="firstname" class="block font-medium text-custom-gray">First Name</label>
+              <input type="text" id="firstname" name="firstname" required class="mt-1 font-arial text-xs block w-full p-2 border-2 border-inset border-custom-gray-200 outline-none py-1 px-3 h-10">
+          </div>
+          <div class="mb-4">
+              <label for="lastname" class="block font-medium text-custom-gray">Last Name</label>
+              <input type="text" id="lastname" name="lastname" required class="mt-1 font-arial text-xs block w-full p-2 border-2 border-inset border-custom-gray-200 outline-none py-1 px-3 h-10">
+          </div>
+          <div class="mb-4">
+              <label for="company" class="block font-medium text-custom-gray">Company</label>
+              <input type="text" id="company" name="company" required class="mt-1 font-arial text-xs block w-full p-2 border-2 border-inset border-custom-gray-200 outline-none py-1 px-3 h-10">
+          </div>
+          <div class="mb-4">
+              <label for="phonenumber" class="block font-medium text-custom-gray">Phone Number</label>
+              <input type="text" id="phonenumber" name="phonenumber" required class="mt-1 font-arial text-xs block w-full p-2 border-2 border-inset border-custom-gray-200 outline-none py-1 px-3 h-10">
+          </div>
+          <div class="mb-4">
+              <label for="email" class="block font-medium text-custom-gray">Email</label>
+              <input type="email" id="email" name="email" required class="mt-1 font-arial text-xs block w-full p-2 border-2 border-inset border-custom-gray-200 outline-none py-1 px-3 h-10">
+          </div>
+          <div class="mb-4">
+              <label for="jobtitle" class="block font-medium text-custom-gray">Job Title</label>
+              <select id="jobtitle" name="jobtitle" required class="mt-1 font-arial text-xs block w-full p-2 border border-custom-gray-200 outline-none py-1 px-3 h-10">
+                  <option value="" disabled selected>Please Select</option>
+                  <option value="Co-Owner/Partner">Co-Owner/Partner</option>
+                  <option value="Employee/Staff">Employee/Staff</option>
+                  <option value="Manager/Supervisor/Assistant">Manager/Supervisor/Assistant</option>
+                  <option value="Owner/Founder/Executive">Owner/Founder/Executive</option>
+              </select>
+          </div>
+          <div class="mb-4">
+              <label for="state" class="block font-medium text-custom-gray">State</label>
+              <select id="state" name="state" required class="mt-1 font-arial text-xs block w-full p-2 border border-custom-gray-200 outline-none py-1 px-3 h-10">
+                  <option value="" disabled selected>Please Select</option>
+                  <option value="california">California</option>
+                  <option value="texas">Texas</option>
+                  <option value="new-york">New York</option>
+              </select>
+          </div>
+          <div class="mb-4">
+              <label for="industry" class="block font-medium text-custom-gray">Industry</label>
+              <select id="industry" name="industry" required class="mt-1 font-arial text-xs block w-full p-2 border border-custom-gray-200 outline-none py-1 px-3 h-10">
+                  <option value="" disabled selected>Please Select</option>
+                  <option value="residential_roofing">Residential Roofing</option>
+                  <option value="commercial_roofing">Commercial Roofing</option>
+                  <option value="general_construction">General Construction</option>
+                  <option value="fire_water_restoration">Fire & Water Restoration</option>
+                  <option value="graveyard_management">Graveyard Management</option>
+                  <option value="landscaping">Landscaping</option>
+                  <option value="hardscaping">Hardscaping</option>
+                  <option value="exterior_remodeling">Exterior Remodeling</option>
+                  <option value="interior_remodeling">Interior Remodeling</option>
+                  <option value="building_supply">Building Supply</option>
+                  <option value="equipment_rental">Equipment Rental</option>
+                  <option value="event_services">Event Services</option>
+                  <option value="transportation">Transportation</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="trash_disposal_recycle">Trash Disposal / Recycle</option>
+                  <option value="hvac">HVAC</option>
+                  <option value="solar">Solar</option>
+                  <option value="other">Other</option>
+              </select>
+          </div>
+          <div class="col-span-1 md:col-span-2 mb-4">
+              <p class="text-custom-gray leading-9 md:leading-10">
+                  Equipter uses your contact information to discuss our products and services and may contact you via email, phone, or SMS. Unsubscribe options and privacy details are in our <a href="https://www.equipter.com/privacy-policy" target="_blank" rel="nofollow noopener" class="text-custom-orange">Privacy Policy</a>.
+              </p>
+          </div>
+          <div class="col-span-1 md:col-span-2 w-full text-center">
+            <input type="submit" value="Build Now" class="font-arial rounded-none bg-custom-orange text-white hover:bg-custom-orange focus:outline-none cursor-pointer px-8 py-2.5 uppercase">
+          </div>
+      </form>      
     </div>
+    </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

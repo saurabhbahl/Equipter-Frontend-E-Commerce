@@ -4,8 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'customBlue': '#1E40AF',
-      }
+        'custom-orange': '#ea7600',
+        'custom-gray': '#444',
+        'custom-gray-200': '#767676',
+      },
+      fontFamily: {
+        'work-sans': ['Work Sans', 'sans-serif'],
+        'arial': ['Arial', 'sans-serif'],
+      },
+      borderStyle: {
+        inset: 'inset',
+      },
     },
   },
   plugins: [],

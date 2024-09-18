@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*Global*/
+body {
+    font-size: 16px;
+}
+/*Build Form*/
+
+.build-form {
+    background-color: hsla(0, 0%, 94%, .88);
+}
