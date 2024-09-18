@@ -21,12 +21,12 @@ Ensure Git is installed on your system. Download and install it from the officia
 4. **Verify Git Installation:**
 After installing, verify Git installation by running:
 
-    git -v
+    git -v 
 
 5. **Clone the Repository:**
 Clone the repository to your local computer by running the following command:
 
-    git clone <repository-url>
+    git clone https://github.com/saurabhbahl/Equipter-Frontend-E-Commerce.git
 
 6. **Navigate to the Project Folder and Install Dependencies:**
 
