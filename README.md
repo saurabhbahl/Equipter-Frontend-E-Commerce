@@ -39,3 +39,7 @@ To start the project and watch for changes in Tailwind CSS, run the following co
 
 
     npx tailwindcss -i ./style.css -o ./output.css --watch
+    
+or 
+
+    npm run build:css
