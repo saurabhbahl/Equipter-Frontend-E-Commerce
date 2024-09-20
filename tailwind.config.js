@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         'work-sans': ['Work Sans', 'sans-serif'],
         'arial': ['Arial', 'sans-serif'],
+        'robot': ['Roboto', 'sans-serif'],
       },
       borderStyle: {
         inset: 'inset',

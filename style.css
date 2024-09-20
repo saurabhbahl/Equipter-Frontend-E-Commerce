@@ -12,3 +12,40 @@ body {
 .build-form {
     background-color: hsla(0, 0%, 94%, .88);
 }
+
+/**/
+.image-slider, .image-slider .slick-list, .image-slider .slick-track {
+    height: 712px;
+}
+.image-slider .slick-dots button {
+    background: #1e1e1e;
+    border: none;
+    color: transparent;
+    height: 14px;
+    opacity: .15;
+    width: 90px
+}
+.image-slider ul.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none
+}
+.image-slider .slick-dots .slick-active button {
+    background: #f6841f;
+    opacity: 1
+}
+.heading-bottom-border:after {
+    background-color: #F6841F;
+    content: "";
+    display: block;
+    height: 7px;
+    margin-top: 5px;
+    width: 73px;
+}
+.main-heading h1 {
+    font-size: 154px;
+    line-height: 180px;
+    color: #1e1e1e;
+    opacity: 3%;
+}
