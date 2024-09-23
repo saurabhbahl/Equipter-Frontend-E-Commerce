@@ -6,6 +6,8 @@
 /*Global*/
 body {
     font-size: 16px;
+    font-family: 'Roboto', 'sans-serif';
+    color: #1e1e1e;
 }
 /*Build Form*/
 
@@ -17,7 +19,7 @@ body {
 .image-slider, .image-slider .slick-list, .image-slider .slick-track {
     height: 712px;
 }
-.image-slider .slick-dots button {
+.slider-custom-nav .slick-dots button {
     background: #1e1e1e;
     border: none;
     color: transparent;
@@ -25,13 +27,13 @@ body {
     opacity: .15;
     width: 90px
 }
-.image-slider ul.slick-dots {
+.slider-custom-nav ul.slick-dots {
     display: flex;
     justify-content: center;
     gap: 30px;
     list-style: none
 }
-.image-slider .slick-dots .slick-active button {
+.slider-custom-nav .slick-dots .slick-active button {
     background: #f6841f;
     opacity: 1
 }
@@ -48,4 +50,28 @@ body {
     line-height: 180px;
     color: #1e1e1e;
     opacity: 3%;
+}
+.tabs-section .tab-title.active:after {
+    content: "";
+    background-color: #F6841F;
+    width: 100%;
+    height: 6px;
+    display: block;
+    margin-bottom: -1px;
+}
+.tabs-section .tab-title.active .tab-title-link {
+    color:#F6841F;
+}
+.tab-slider.slider-custom-nav .slick-dots {
+    gap: 15px;
+}
+.tab-slider.slider-custom-nav .slick-dots button {
+    width: 25px;
+    height: 5px;
+}
+.tab-slider .slick-dots {
+    margin-top: 20px;
+}
+.sidebar-tabs-block .tabs-content {
+    height: 735px;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="./output.css" rel="stylesheet" />
     
@@ -12,13 +13,13 @@
   <body>
     <header></header>
     <main>
-      <section class="content-with-sidebar py-20 w-full d-flex">
-        <div class="content-block w-3/4">
-            <div class="main-heading px-16">
+      <section class="content-with-sidebar py-20 w-full flex">
+        <div class="content-block w-2/3">
+            <div class="main-heading px-16 -mb-28">
                 <h1 class="uppercase font-robot">Build + Buy</h1>
             </div>
             <div class="images-slides-wrapper pb-14">
-                <div class="image-slider">
+                <div class="image-slider slider-custom-nav">
                     <div class="image-item">
                         <img src="images/EQ4000-220818_Equipter_011_1.png" class="w-full h-full object-contain">
                     </div>
@@ -52,9 +53,275 @@
                 </div>
             </div>
         </div>
-        <div class="sidebar-block w-3/12">
-            <h2>4000</h2>
-            <p>The Towable Roofing Trailer</p>
+        <div class="sidebar-block w-1/3 pr-14 pl-8">
+            <div class="text-center font-robot mb-9">
+                <h2 class="text-custom-black-200 text-64">4000</h2>
+                <p class="text-custom-black-200 text-19">The Towable Roofing Trailer</p>
+            </div>
+            <div class="tabs-section tabs font-robot sidebar-tabs-block">
+                <ul class="tabs-nav roofing-tabs-nav flex gap-12 border-b-4 border-custom-orange-100">
+                  <li class="tab-title active min-w-36">
+                    <a href="#roofing-tab1" class="tab-title-link pb-2 inline-block text-custom-black-25 font-semibold text-xl leading-6">Cash</a>
+                  </li>
+                  <li class="tab-title min-w-36">
+                    <a href="#roofing-tab2" class="tab-title-link pb-2 inline-block text-custom-black-25 font-semibold text-xl leading-6">Financing</a>
+                  </li>
+                </ul>
+                <div id="roofing-tabs-content" class="tabs-content pt-8 overflow-hidden overflow-y-scroll">
+                    <div id="roofing-tab1" class="tab-content">
+                        <table class="min-w-full overflow-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="text-left text-custom-black-25 text-15 font-semibold">Base Price</th>
+                                    <th></th>
+                                    <th class="text-left text-custom-black-25 text-15 font-semibold">Add-Ons</th>
+                                    <th></th>
+                                    <th class="text-left text-custom-black-25 text-15 font-semibold">Net Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-custom-orange-100 align-middle font-semibold text-32">$38,900 <span class="text-15 leading-9 font-semibold text-custom-black-25 float-right pr-2">+</span></td>
+                                    <td></td>
+                                    <td class="text-custom-orange-100 align-middle font-semibold text-32">$995 <span class="text-15 leading-9 font-semibold text-custom-black-25 float-right pr-2">=</span></td>
+                                    <td></td>
+                                    <td class="text-custom-orange-100 align-middle font-semibold text-32">$40,295</td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                        <div class="flex gap-6 justify-between pt-10 items-center">
+                            <h3 class="font-semibold text-xl leading-6">Equipter 4000 Base Unit</h3>
+                            <form class="flex gap-3 items-center">
+                                <label for="qty" class="font-semibold text-lg uppercase">Qty</label>
+                                <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="1" required>
+                            </form>
+                        </div> 
+                        <div class="flex gap-6 justify-between pt-10 items-center">
+                            <form class="flex gap-3 items-center">
+                                <input type="checkbox" id="roofingPackage" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                <label for="roofingPackage" class="font-semibold text-xl leading-6">Roofing Accessories Package</label>
+                            </form>                                                        
+                            <h3 class="text-black text-opacity-50 text-xl leading-6 font-semibold">$995</h3>
+                        </div>                     
+                        <div class="text-right pt-3">
+                            <form class="flex gap-3 items-center justify-end">
+                                <label for="qty" class="font-semibold text-lg uppercase">Qty</label>
+                                <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="1" required>
+                            </form>
+                        </div>
+                        <div class="tab-slider-wrapper pt-4">
+                            <div class="tab-slider slider-custom-nav">
+                                <div class="tab-slide-item">
+                                    <img src="images/RoofingPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Roof Chute (x2)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/RoofingPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Roof Chute (x2)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/RoofingPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Roof Chute (x2)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/RoofingPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Roof Chute (x2)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 justify-between pt-10 items-center">
+                            <form class="flex gap-3 items-center">
+                                <input type="checkbox" id="premiumPackage" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                <label for="premiumPackage" class="font-semibold text-xl leading-6">Premium Accessories Package</label>
+                            </form>                                                        
+                            <h3 class="text-black text-opacity-50 text-xl leading-6 font-semibold">$2675</h3>
+                        </div> 
+                        <div class="tab-slider-wrapper pt-4">
+                            <div class="tab-slider slider-custom-nav">
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                                <div class="tab-slide-item">
+                                    <img src="images/PremiumPackage.png" class="w-full">
+                                    <div class="tab-slide-content bg-custom-gray-300 flex justify-between items-center px-5 py-7 w-full -mt-10 relative">
+                                        <h3 class="font-semibold text-black text-27">8' Gutter Protector (x1)</h3>
+                                        <img src="images/InfoIcon.png" class="w-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accessories-block mt-9">
+                            <h3 class="font-semibold text-xl text-center mb-7">Add-On Accessories</h3>
+                            <div class="accessories-info">
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="RoofChute" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="RoofChute" class="font-semibold text-black opacity-50 text-17">8' Roof Chute</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$165</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="flex gap-3 items-center justify-end mt-3">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="GutterProtector" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="GutterProtector" class="font-semibold text-black opacity-50 text-17">8' Gutter Protector</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$154</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="active:flex gap-3 items-center justify-end mt-3 hidden">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="RearKit" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="RearKit" class="font-semibold text-black opacity-50 text-17">Rear Extension Kit</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$489</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="active:flex gap-3 items-center justify-end mt-3 hidden">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="TrackMat" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="TrackMat" class="font-semibold text-black opacity-50 text-17">2' x 6' Track Mat</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$329</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="active:flex gap-3 items-center justify-end mt-3 hidden">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="Outrigger" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="Outrigger" class="font-semibold text-black opacity-50 text-17">18" x 18" Outrigger Pad</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$79</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="active:flex gap-3 items-center justify-end mt-3 hidden">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="TireSealant" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="TireSealant" class="font-semibold text-black opacity-50 text-17">Tire Sealant Kit</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <div class="flex gap-3 items-center"><h4 class="text-black opacity-50 font-semibold text-17">$195</h4><img src="images/InfoIcon.png" class="w-5"></div>
+                                        <form class="active:flex gap-3 items-center justify-end mt-3 hidden">
+                                            <label for="qty" class="font-semibold text-lg uppercase text-black">Qty</label>
+                                            <input type="number" id="qty" name="qty" min="1" class="border border-solid border-custom-black-200 w-7 h-7 text-center text-custom-black-200 placeholder:text-custom-black-200 outline-none" placeholder="2" required>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-block mt-9">
+                            <h3 class="font-semibold text-xl text-center mb-7">Shipping Options</h3>
+                            <div class="accessories-info">
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="Pickup" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="Pickup" class="font-semibold text-black opacity-50 text-17">Pick-up</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <h4 class="text-black opacity-50 font-semibold text-17">$0</h4>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <form class="flex items-center justify-between gap-3">
+                                        <input type="checkbox" id="DeliveryState" class="form-checkbox w-7 h-7 text-black border-2 border-custom-black-200 rounded focus:outline-none focus:ring-0 checked:bg-white checked:border-custom-black-200 checked:accent-black">
+                                        <label for="DeliveryState" class="font-semibold text-black opacity-50 text-17">Delivery to the State of: PA</label>
+                                    </form>
+                                    <div class="price-col">
+                                        <h4 class="text-black opacity-50 font-semibold text-17">$400</h4>
+                                    </div>
+                                </div>
+                                <p class="text-custom-black-25 text-sm">*Tax, title, and registration fees will be additional costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="roofing-tab2" class="tab-content">
+                        <h1>Tab 2</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="order-block border-t border-custom-gray-400 pt-9 mt-3">
+                <h2 class="text-25 font-semibold text-center">Order Your Equipter 4000</h2>
+                <h3 class="font-semibold text-17 text-black opacity-50 text-center">Est. Delivery: Jul – Aug 2024</h3>
+                <div class="button-block flex items-center gap-14 mt-6 justify-center">
+                    <a href="#" class="inline-block bg-black bg-opacity-10 text-white hover:bg-custom-orange hover:text-white hover:bg-opacity-100 px-6 py-3 text-15 leading-5 transition-all text-center">Send Build</a>
+                    <a href="#" class="inline-block hover:bg-black hover:bg-opacity-10 text-white bg-custom-orange hover:text-white px-7 py-3 text-15 leading-5 transition-all text-center">Continue</a>
+                </div>
+            </div>
         </div>
       </section>
     </main>
