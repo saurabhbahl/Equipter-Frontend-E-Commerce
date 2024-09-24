@@ -46,8 +46,8 @@ body {
     width: 73px;
 }
 .main-heading h1 {
-    font-size: 154px;
-    line-height: 180px;
+    font-size: 132px;
+    line-height: 150px;
     color: #1e1e1e;
     opacity: 3%;
 }
@@ -72,6 +72,76 @@ body {
 .tab-slider .slick-dots {
     margin-top: 20px;
 }
-.sidebar-tabs-block .tabs-content {
-    height: 735px;
+.accessories-col.active label.opacity-50, .accessories-col.active .price-col .opacity-50  {
+    opacity: 1;
+}
+.form-checkbox {
+    appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid #ccc;
+    border-radius: 0.25rem;
+    outline: none;
+    cursor: pointer; 
+}
+.form-checkbox:checked {
+    background-color: white;
+    border-color: black;
+    position: relative;
+}
+.form-checkbox:checked::before {
+    content: '';
+    position: absolute; 
+    top: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0.5rem;
+    height: 1rem;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+@media only screen and (max-width: 767px){
+    .slider-custom-nav .slick-dots button {
+        width: 38px;
+        height: 6px;
+    }
+    .heading-bottom-border:after {
+        height: 3px;
+        margin-top: 2px;
+        width: 33px;
+    }
+    .image-slider, .image-slider .slick-list, .image-slider .slick-track {
+        height: 285px;
+    }    
+    .slider-custom-nav ul.slick-dots {
+        padding-top: 10px;
+    }
+    .form-checkbox, #qty {
+        width: 24px;
+        height: 24px;
+    }
+    #qty {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .form-checkbox:checked::before {
+        width: 6px;
+        height: 12px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .sidebar-tabs-block .tabs-content .tabs-scroll-content {
+        height: 735px;
+        scrollbar-width: none;
+    }
+}
+@media only screen and (min-width:1440px) {
+    .main-heading h1 {
+        font-size: 154px;
+        line-height: 180px;
+    }
 }

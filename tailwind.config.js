@@ -19,6 +19,7 @@ module.exports = {
         'custom-gray-200': '#767676',
         'custom-gray-300': '#f5f5f5',
         'custom-gray-400': '#d9d9d9',
+        'custom-gray-500': '#666',
         'custom-black-200': '#1e1e1e',
         'custom-black-25': 'rgba(0, 0, 0, 0.25)',
       },
@@ -35,25 +36,40 @@ module.exports = {
         '19': ['19px', { lineHeight: '23px' }],
         '17': ['17px', { lineHeight: '19px' }],
         '15': ['15px', { lineHeight: '17px' }],
+        '13': ['15px', { lineHeight: '17px' }],
+        'xxs': ['8px', { lineHeight: '10px' }],
       },
       borderStyle: {
         inset: 'inset',
       },
     },
     screens: {
+      'xs': '320px',
+      'sm': '576px',
+      'md': '768px',
       'xl': '1200px',
       '2xl': '1440px',
+      '3xl': '1920px',
     }
   },
   plugins: [
     function ({ addComponents }) {
       addComponents({
         '.container': {
+          '@screen xs': {
+            maxWidth: '100%',
+          },
+          '@screen sm': {
+            maxWidth: '540px',
+          },
+          '@screen md': {
+            maxWidth: '960px',
+          },
           '@screen xl': {
-            maxWidth: '1180px',
+            maxWidth: '1190px',
           },
           '@screen 2xl': {
-            maxWidth: '1300px',
+            maxWidth: '1345px',
           },
         }
       })
