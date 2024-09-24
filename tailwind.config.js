@@ -27,6 +27,7 @@ module.exports = {
         'work-sans': ['Work Sans', 'sans-serif'],
         'arial': ['Arial', 'sans-serif'],
         'robot': ['Roboto', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       fontSize: {
         '64': ['64px', { lineHeight: '75px' }],
@@ -47,6 +48,7 @@ module.exports = {
       'xs': '320px',
       'sm': '576px',
       'md': '768px',
+      'lg': '992px',
       'xl': '1200px',
       '2xl': '1440px',
       '3xl': '1920px',
@@ -63,6 +65,9 @@ module.exports = {
             maxWidth: '540px',
           },
           '@screen md': {
+            maxWidth: '720px',
+          },
+          '@screen lg': {
             maxWidth: '960px',
           },
           '@screen xl': {

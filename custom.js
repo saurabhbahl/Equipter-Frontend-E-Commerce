@@ -56,3 +56,35 @@ jQuery(document).ready(function($) {
     });
   });
 });
+const modal = document.getElementById('DepositForm');
+const openModal = document.getElementById('DepositBtn');
+const closeModal = document.getElementById('closeModal');
+openModal.addEventListener('click', () => {
+    modal.classList.add('show');
+});
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('show');
+});
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.remove('show');
+    }
+});
+
+function toggleContent() {
+  const contentDetail = document.querySelector('.form-content-detail');
+  const toggleIcon = document.querySelector('.toggle-icon');
+
+  // Toggle the hidden class and set max-height for smooth transition
+  if (contentDetail.classList.contains('hidden')) {
+      contentDetail.classList.remove('hidden');
+      contentDetail.style.maxHeight = contentDetail.scrollHeight + 'px';
+      toggleIcon.textContent = '-';
+  } else {
+      contentDetail.style.maxHeight = '0';
+      toggleIcon.textContent = '+';
+      setTimeout(() => {
+          contentDetail.classList.add('hidden');
+      }, 300); // Match the duration of the transition
+  }
+}
