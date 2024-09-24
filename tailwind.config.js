@@ -2,6 +2,15 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
+    container: {
+      padding: {
+        'xl': '1rem',
+      },
+      maxWidth: {
+        '2xl' : '1300px'
+      },
+      center : true,
+    },
     extend: {
       colors:{
         'custom-orange': '#ea7600',
@@ -31,6 +40,23 @@ module.exports = {
         inset: 'inset',
       },
     },
+    screens: {
+      'xl': '1200px',
+      '2xl': '1440px',
+    }
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          '@screen xl': {
+            maxWidth: '1180px',
+          },
+          '@screen 2xl': {
+            maxWidth: '1300px',
+          },
+        }
+      })
+    }
+  ],
 };
