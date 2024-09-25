@@ -173,7 +173,7 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-}
+} 
 .form-block .form-field {
     border: 0.86px solid #CCCCCC;
     border-radius: 6.86px;

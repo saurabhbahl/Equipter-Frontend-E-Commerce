@@ -159,25 +159,18 @@ function toggleContent(event) {
   const titleElement = event.currentTarget;
   const contentDetail = titleElement.nextElementSibling;
   const toggleIcon = titleElement.querySelector('.toggle-icon');
-
-  // Check if the content is currently visible
   const isOpen = contentDetail.style.maxHeight && contentDetail.style.maxHeight !== '0px';
-
   if (isOpen) {
-      // If it's open, close it
       contentDetail.style.maxHeight = '0';
       toggleIcon.textContent = '+';
   } else {
-      // If it's closed, open it
-      contentDetail.classList.remove('hidden'); // Ensure it's in the flow for height calculation
-      contentDetail.style.maxHeight = contentDetail.scrollHeight + 'px'; // Set to full height
+      contentDetail.classList.remove('hidden'); 
+      contentDetail.style.maxHeight = contentDetail.scrollHeight + 'px'; 
       toggleIcon.textContent = '-';
   }
-
-  // After the closing transition, add the hidden class to hide it completely
   if (isOpen) {
       setTimeout(() => {
           contentDetail.classList.add('hidden');
-      }, 300); // Match the duration of the transition
+      }, 300);
   }
 }
