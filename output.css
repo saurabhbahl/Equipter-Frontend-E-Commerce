@@ -678,8 +678,8 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.-mb-40 {
-  margin-bottom: -10rem;
+.-mb-16 {
+  margin-bottom: -4rem;
 }
 
 .-mt-10 {
@@ -796,6 +796,10 @@ video {
 
 .max-h-0 {
   max-height: 0px;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-3\/12 {
@@ -1002,6 +1006,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-9 {
@@ -1357,6 +1365,13 @@ body {
   color: #1e1e1e;
 }
 
+html.modal-open main, html.modal-open header, html.modal-open footer {
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
 /*Build Form*/
 
 .build-form {
@@ -1366,7 +1381,23 @@ body {
 /**/
 
 .image-slider, .image-slider .slick-list, .image-slider .slick-track {
-  height: 712px;
+  /* height: 712px; */
+}
+
+.image-slider .slick-slide.slick-current {
+  transform: scale(1.15);
+}
+
+.image-slider .slick-slide {
+  transition: 0.5s all;
+}
+
+.image-slider .slick-slide:not(.slick-current) {
+  opacity: 0.1;
+}
+
+.modal-slider > div {
+  box-shadow: 4px 4px 15px rgb(0 0 0 / 15%);
 }
 
 .slider-custom-nav .slick-dots button {
@@ -1466,42 +1497,54 @@ body {
   transform: rotate(45deg);
 }
 
-#DepositForm.modal {
+/* slider lightbox  */
+
+.modal {
   display: none;
   position: fixed;
-  top: 0;
+  z-index: 1000;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.25);
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  visibility: hidden;
-  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(255 255 255 / 25%);
 }
 
-#DepositForm.modal.show {
+.modal-content {
+  margin: 10% auto;
   display: flex;
-  opacity: 1;
-  visibility: visible;
+  justify-content: space-between;
 }
 
-#DepositForm .modal-body {
-  box-shadow: 4px 4px 8px 15px #0000000D;
-  padding: 32px 35px 55px;
-  height: 895px;
-  overflow: hidden;
-  overflow-y: scroll;
+.lightbox-image img {
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.deposit-modal-open {
-  overflow: hidden;
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #000000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.form-content-detail {
-  transition: max-height 0.3s ease-in-out;
+#modal-details {
+  max-width: 50%;
+  color: #333;
+}
+
+.modal-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-slider {
+  width: 100%;
 }
 
 .toggle-icon {
@@ -1561,6 +1604,36 @@ body {
   background-repeat: no-repeat;
 }
 
+#DepositForm.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.25);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: hidden;
+}
+
+#DepositForm.modal.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+#DepositForm .modal-body {
+  box-shadow: 4px 4px 8px 15px #0000000D;
+  padding: 32px 35px 55px;
+}
+
+.form-content-detail {
+  transition: max-height 0.3s ease-in-out;
+}
+
 @media only screen and (max-width: 767px){
   .slider-custom-nav .slick-dots button {
     width: 38px;
@@ -1574,7 +1647,7 @@ body {
   }
 
   .image-slider, .image-slider .slick-list, .image-slider .slick-track {
-    height: 285px;
+    /* height: 285px; */
   }
 
   .slider-custom-nav ul.slick-dots {
@@ -1871,6 +1944,10 @@ body {
 }
 
 @media (min-width: 1440px) {
+  .\32xl\:p-11 {
+    padding: 2.75rem;
+  }
+
   .\32xl\:pr-4 {
     padding-right: 1rem;
   }
