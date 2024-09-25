@@ -718,6 +718,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-11 {
   margin-top: 2.75rem;
 }
@@ -1533,6 +1537,18 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
 
 .lightbox-slider {
   width: 100%;
+}
+
+.modal-slider > div, .modal-slider > div img {
+  transition: 0.5s all;
+}
+
+.modal-slider:not(.slick-current) > div {
+  background-color: #d9d9d9;
+}
+
+.modal-slider:not(.slick-current) > div img {
+  opacity: 0.15;
 }
 
 .toggle-icon {
