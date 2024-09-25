@@ -61,28 +61,40 @@ const openModal = document.getElementById('DepositBtn');
 const closeModal = document.getElementById('closeModal');
 openModal.addEventListener('click', () => {
     modal.classList.add('show');
+    document.body.classList.add('deposit-modal-open'); // Prevent scrolling
 });
 closeModal.addEventListener('click', () => {
     modal.classList.remove('show');
+    document.body.classList.remove('deposit-modal-open'); // Allow scrolling again
 });
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.classList.remove('show');
+        document.body.classList.remove('deposit-modal-open'); // Allow scrolling again
     }
 });
 
-function toggleContent() {
-  const contentDetail = document.querySelector('.form-content-detail');
-  const toggleIcon = document.querySelector('.toggle-icon');
+function toggleContent(event) {
+  const titleElement = event.currentTarget;
+  const contentDetail = titleElement.nextElementSibling;
+  const toggleIcon = titleElement.querySelector('.toggle-icon');
 
-  // Toggle the hidden class and set max-height for smooth transition
-  if (contentDetail.classList.contains('hidden')) {
-      contentDetail.classList.remove('hidden');
-      contentDetail.style.maxHeight = contentDetail.scrollHeight + 'px';
-      toggleIcon.textContent = '-';
-  } else {
+  // Check if the content is currently visible
+  const isOpen = contentDetail.style.maxHeight && contentDetail.style.maxHeight !== '0px';
+
+  if (isOpen) {
+      // If it's open, close it
       contentDetail.style.maxHeight = '0';
       toggleIcon.textContent = '+';
+  } else {
+      // If it's closed, open it
+      contentDetail.classList.remove('hidden'); // Ensure it's in the flow for height calculation
+      contentDetail.style.maxHeight = contentDetail.scrollHeight + 'px'; // Set to full height
+      toggleIcon.textContent = '-';
+  }
+
+  // After the closing transition, add the hidden class to hide it completely
+  if (isOpen) {
       setTimeout(() => {
           contentDetail.classList.add('hidden');
       }, 300); // Match the duration of the transition

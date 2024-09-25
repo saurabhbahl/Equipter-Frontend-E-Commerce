@@ -22,12 +22,15 @@ module.exports = {
         'custom-gray-500': '#666',
         'custom-black-200': '#1e1e1e',
         'custom-black-25': 'rgba(0, 0, 0, 0.25)',
+        'custom-red': '#EB5757',
+        'custom-sky': '#E2E8F0',
       },
       fontFamily: {
         'work-sans': ['Work Sans', 'sans-serif'],
         'arial': ['Arial', 'sans-serif'],
         'robot': ['Roboto', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'noto-sans': ['Noto Sans', 'sans-serif'],
       },
       fontSize: {
         '64': ['64px', { lineHeight: '75px' }],
@@ -37,7 +40,8 @@ module.exports = {
         '19': ['19px', { lineHeight: '23px' }],
         '17': ['17px', { lineHeight: '19px' }],
         '15': ['15px', { lineHeight: '17px' }],
-        '13': ['15px', { lineHeight: '17px' }],
+        '13': ['13px', { lineHeight: '16px' }],
+        '10': ['10px', { lineHeight: '15px' }],
         'xxs': ['8px', { lineHeight: '10px' }],
       },
       borderStyle: {

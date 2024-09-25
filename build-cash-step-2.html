@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="./output.css" rel="stylesheet" />
@@ -195,25 +196,233 @@
                 </div>
                 <div class="deposit-info">
                     <div class="form-block">
-                        <div class="form-title flex gap-x-3 items-center cursor-pointer" onclick="toggleContent()">
+                        <div class="form-title flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
                             <span class="toggle-icon text-lg">+</span>
-                            <h3 class="mr-2 font-semibold text-xl">Build Summary</h3>
+                            <h3 class="mr-2 font-semibold text-lg md:text-xl">Build Summary</h3>
                         </div>
-                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <table>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out pl-6">
+                            <table class="w-full md:w-3/5 border-separate border-spacing-2">
                                 <tr>
-                                    <td class="pr-3">Equipter 4000</td>
-                                    <td>$38,900 <span>(1)</span></td>
+                                    <td class="pr-3 text-17 font-semibold text-black">Equipter 4000</td>
+                                    <td class="text-right text-17 font-semibold text-black">$38,900</td>
+                                    <td class="text-custom-black-25 text-17 font-semibold">(1)</td>
                                 </tr>
                                 <tr>
-                                    <td class="pr-3">Roofing Accessories Package</td>
-                                    <td>$995 <span>(1)</span></td>
+                                    <td class="pr-3 text-17 font-semibold text-black">Roofing Accessories Package</td>
+                                    <td class="text-right text-17 font-semibold text-black">$995</td>
+                                    <td class="text-custom-black-25 text-17 font-semibold">(1)</td>
                                 </tr>
                                 <tr>
-                                    <td class="pr-3">Pick-up</td>
-                                    <td>$0</td>
+                                    <td class="pr-3 text-17 font-semibold text-black">Pick-up</td>
+                                    <td class="text-right text-17 font-semibold text-black">$0</td>
                                 </tr>
                             </table>
+                            <div class="h-10"></div>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <div class="form-title flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
+                            <span class="toggle-icon text-lg">+</span>
+                            <h3 class="mr-2 font-semibold text-lg md:text-xl">Contact Info</h3>
+                        </div>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out pl-8">
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">First Name*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Auto Populate" name="FirstName" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Last Name*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Auto Populate" name="LastName" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5 error-display">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Company*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Auto Populate" name="UserCompany" required>
+                                    <p class="text-custom-red text-10 mt-2 error-msg font-noto-sans">Error message informing me of a problem</p>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Phone Number*</label>
+                                    <input type="tel" class="form-field w-full" placeholder="Auto Populate" name="PhoneNumber" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9 md:pr-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Email*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Auto Populate" name="UserEmail" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="h-10"></div>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <div class="form-title flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
+                            <span class="toggle-icon text-lg">+</span>
+                            <h3 class="mr-2 font-semibold text-lg md:text-xl">Payment Details</h3>
+                        </div>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out pl-8">
+                            <div class="field-block w-full mb-4 md:mb-5">
+                                <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Name on card</label>
+                                <input type="text" class="form-field w-full" placeholder="Enter" name="NameOnCard">
+                                <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                            </div>
+                            <div class="field-block w-full mb-4 md:mb-5">
+                                <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Card number</label>
+                                <input type="text" class="form-field w-full" placeholder="123 - 456 -" name="CardNumber">
+                                <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                            </div>
+                            <div class="block md:flex items-center gap-x-3">
+                                <div class="field-block w-full md:w-1/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Expiration Date</label>
+                                    <input type="text" class="form-field w-full" placeholder="MM/YY" name="ExpirationDate">
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                                <div class="field-block w-full md:w-1/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">CVC</label>
+                                    <input type="text" class="form-field w-full" placeholder="123" name="CVC">
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="h-10"></div>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <div class="form-title flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
+                            <span class="toggle-icon text-lg">+</span>
+                            <h3 class="mr-2 font-semibold text-lg md:text-xl">Delivery Address</h3>
+                        </div>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out pl-8">
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Address*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Enter" name="UserAddress" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">City*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Enter" name="UserCity" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">State*</label>
+                                    <select id="UserState" class="form-field w-full" name="UserState" required>
+                                        <option value="">Auto Populate</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                    </select>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Zip Code*</label>
+                                    <input type="tel" class="form-field w-full" placeholder="Enter" name="ZipCode" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9 md:pr-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Country*</label>
+                                    <select id="UserCountry" class="form-field w-full" name="UserCountry" required>
+                                        <option value="">--Select a Country--</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="IN">India</option>
+                                        <option value="US" selected>USA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="h-10"></div>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <div class="form-title block md:flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
+                            <div class="flex items-center gap-x-3">
+                                <span class="toggle-icon text-lg">+</span>
+                                <h3 class="mr-2 font-semibold text-lg md:text-xl">Billing Information</h3>
+                            </div>
+                            <div class="flex gap-x-2 items-center md:pl-6 mt-3 md:mt-0">
+                                <input type="checkbox" id="BillingInfo" class="form-checkbox text-black flex-shrink-0">
+                                <label class="font-noto-sans text-sm text-custom-gray-500">Billing address is same as delivery address</label>
+                            </div>
+                        </div>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out pl-8">
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Address*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Enter" name="BillingUserAddress" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">City*</label>
+                                    <input type="text" class="form-field w-full" placeholder="Enter" name="BillingUserCity" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">State*</label>
+                                    <select id="BillingUserState" class="form-field w-full" name="BillingUserState" required>
+                                        <option value="">Auto Populate</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                    </select>
+                                </div>
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Zip Code*</label>
+                                    <input type="tel" class="form-field w-full" placeholder="Enter" name="BillingZipCode" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                            <div class="block md:flex gap-x-9 md:pr-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Country*</label>
+                                    <select id="BillingUserCountry" class="form-field w-full" name="BillingUserCountry" required>
+                                        <option value="">--Select a Country--</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="IN">India</option>
+                                        <option value="US" selected>USA</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-notice block md:flex items-center w-full gap-x-24 pt-10 mt-14 border-t border-custom-sky">
+                        <div class="deposit-info w-full md:w-3/5">
+                            <h3 class="font-semibold text-lg md:text-xl mb-1 text-custom-gray-500">Due Today</h3>
+                            <div class="flex items-center justify-between mb-3 gap-x-2">
+                                <p class="font-semibold text-black text-base md:text-xl">Non-Refundable Deposit</p>
+                                <p class="text-black font-semibold text-base md:text-xl">$1,500</p>
+                            </div>
+                            <p class="text-xs text-custom-black-25 my-3">Once you confirm your  build, your Equipter will be set for production and your deposit will be non-refundable. Pricing and options are subject to change until your Equiper is built.                            </p>
+                            <div class="flex gap-x-4 items-center">
+                                <input type="checkbox" id="DepositRefund" class="form-checkbox text-black flex-shrink-0" checked>
+                                <label class="font-noto-sans text-sm text-custom-gray-500">I understand my deposit is non-refundable.</label>
+                            </div>
+                        </div>
+                        <div class="deposit-info w-full md:w-2/5 mt-5 md:mt-0 text-center">
+                            <button type="submit" class="inline-block hover:bg-black hover:bg-opacity-10 text-white bg-custom-orange-100 hover:text-white px-6 py-4 text-base md:text-15 leading-5 transition-all text-center font-medium font-inter">Confirm Build</button>
                         </div>
                     </div>
                 </div>

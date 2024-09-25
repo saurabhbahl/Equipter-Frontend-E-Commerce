@@ -99,7 +99,7 @@ body {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-.modal {
+#DepositForm.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -112,18 +112,67 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     visibility: hidden;
+    z-index: 10;
 }
-.modal.show {
+#DepositForm.modal.show {
     display: flex;
     opacity: 1;
     visibility: visible;
 }
-.modal-body {
+#DepositForm .modal-body {
     box-shadow: 4px 4px 8px 15px #0000000D;
     padding: 32px 35px 55px;
+    height: 895px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.deposit-modal-open {
+    overflow: hidden;
 }
 .form-content-detail {
     transition: max-height 0.3s ease-in-out;
+}
+.toggle-icon {
+    width: 19px;
+    height: 19px;
+    background-color: hsl(0deg 0% 0% / 25%);
+    color: #fff;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.form-block .form-field {
+    border: 0.86px solid #CCCCCC;
+    border-radius: 6.86px;
+    height: 48px;
+    padding: 13px 42px 13px 13px;
+    outline: 0;
+}
+.form-block .form-field, .form-block .form-field::placeholder {
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'Noto Sans', 'sans-serif';
+}
+.form-block .form-field:focus {
+    border-width: 1.72px;
+    border-color: #666;
+}
+.error-display .form-field {
+    border-color: #EB5757;
+    background-image: url(images/error-icon.png);
+    background-position: 96% center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+.form-block select.form-field {
+    appearance: none;
+    background-image: url(images/select-arrow.png);
+    background-position: 95% center;
+    background-size: 10px;
+    background-repeat: no-repeat;
 }
 @media only screen and (max-width: 767px){
     .slider-custom-nav .slick-dots button {
