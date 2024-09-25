@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
         centerPadding: '150px',
         slidesToShow: 1,
         arrows: false,
+        autoplay: true,
         dots: true,
         responsive: [
           {
@@ -26,13 +27,6 @@ jQuery(document).ready(function($){
           }
         ]
     });
-    // $('.tab-slider').slick({
-    //   loop: true,
-    //   slidesToShow: 1,
-    //   arrows: false,
-    //   dots: true,
-    // });
-
 
       // Initialize the primary Slick Slider
     $('.tab-slider').slick({
@@ -58,7 +52,6 @@ jQuery(document).ready(function($){
         var imageSrc = $(this).attr('src');
         var detailsId = $(this).siblings('.slide-details').children('.info-icon').data('id');
         var detailsContent = $('#details-' + detailsId).html();
-        // console.log($(this).siblings('.slide-details').children('.info-icon'));
           
           // Create new slide structure
           var slideHtml = `
@@ -100,20 +93,9 @@ jQuery(document).ready(function($){
       $('.lightbox-slider').slick('unslick');
       $('html').removeClass('modal-open');
   });
-
-  // Optionally close the modal when clicking outside of it
-  // $(window).on('click', function(event) {
-  //     if ($(event.target).is('#lightbox-modal')) {
-  //         $('#lightbox-modal').hide();
-  //         // Destroy Slick slider inside modal
-  //         $('.lightbox-slider').slick('unslick');
-  //         $('body').removeClass('modal-open');
-  //     }
-  // });
-
-      
       
 });
+
 jQuery(document).ready(function($) {
   // Initialize all tab sections
   $('.tabs-section').each(function() {
