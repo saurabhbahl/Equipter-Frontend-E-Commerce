@@ -63,10 +63,7 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     margin-top: 5px;
     width: 73px;
 }
-.main-heading h1 {
-    font-size: 132px;
-    line-height: 150px;
-    color: #1e1e1e;
+.main-heading h1 { color: #1e1e1e;
     opacity: 3%;
 }
 .tabs-section .tab-title.active:after {
@@ -199,6 +196,22 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     .sidebar-tabs-block .tabs-content .tabs-scroll-content {
         height: 735px;
         scrollbar-width: none;
+    }
+    .main-heading h1 {
+        font-size: 75px;
+        line-height: 100px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .main-heading h1 {
+        font-size: 110px;
+        line-height: 130px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .main-heading h1 {
+            font-size: 132px;
+            line-height: 150px;
     }
 }
 @media only screen and (min-width:1440px) {
