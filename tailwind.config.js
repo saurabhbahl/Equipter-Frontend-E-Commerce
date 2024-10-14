@@ -37,6 +37,7 @@ module.exports = {
         '32': ['32px', { lineHeight: '37px' }],
         '27': ['27px', { lineHeight: '31px' }],
         '25': ['25px', { lineHeight: '29px' }],
+        '23': ['23px', { lineHeight: '26px' }],
         '19': ['19px', { lineHeight: '23px' }],
         '17': ['17px', { lineHeight: '19px' }],
         '15': ['15px', { lineHeight: '17px' }],

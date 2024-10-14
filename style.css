@@ -131,10 +131,9 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     overflow: auto; 
     background-color: rgb(255 255 255 / 25%);
 }
-.modal-content {
+.lightbox-modal .modal-content {
     margin: 10% auto; 
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 .lightbox-image img {
     max-width: 45%;
@@ -155,8 +154,9 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     color: #333;
 }
 .modal-content {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
 }
 .lightbox-slider {
     width: 100%;
@@ -214,7 +214,7 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     background-size: 10px;
     background-repeat: no-repeat;
 }
-#DepositForm.modal {
+.build-buy-modal.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -228,12 +228,12 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     transition: opacity 0.5s ease, visibility 0.5s ease;
     visibility: hidden;
 }
-#DepositForm.modal.show {
+.build-buy-modal.modal.show {
     display: flex;
     opacity: 1;
     visibility: visible;
 }
-#DepositForm .modal-body {
+.build-buy-modal .modal-body {
     box-shadow: 4px 4px 8px 15px #0000000D;
     padding: 32px 35px 55px;
 }

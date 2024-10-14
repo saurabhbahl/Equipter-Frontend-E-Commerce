@@ -686,6 +686,14 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -758,6 +766,18 @@ video {
   margin-top: 2.25rem;
 }
 
+.-mr-7 {
+  margin-right: -1.75rem;
+}
+
+.-ml-7 {
+  margin-left: -1.75rem;
+}
+
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
 .block {
   display: block;
 }
@@ -814,6 +834,10 @@ video {
   width: 1.75rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -860,6 +884,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -882,6 +910,10 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -911,6 +943,10 @@ video {
 .gap-x-9 {
   -moz-column-gap: 2.25rem;
        column-gap: 2.25rem;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .overflow-hidden {
@@ -1191,9 +1227,24 @@ video {
   line-height: 19px;
 }
 
+.text-19 {
+  font-size: 19px;
+  line-height: 23px;
+}
+
+.text-23 {
+  font-size: 23px;
+  line-height: 26px;
+}
+
 .text-25 {
   font-size: 25px;
   line-height: 29px;
+}
+
+.text-27 {
+  font-size: 27px;
+  line-height: 31px;
 }
 
 .text-2xl {
@@ -1209,6 +1260,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-64 {
+  font-size: 64px;
+  line-height: 75px;
 }
 
 .text-6xl {
@@ -1244,6 +1300,11 @@ video {
 .text-xxs {
   font-size: 8px;
   line-height: 10px;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-medium {
@@ -1503,10 +1564,9 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
   background-color: rgb(255 255 255 / 25%);
 }
 
-.modal-content {
+.lightbox-modal .modal-content {
   margin: 10% auto;
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .lightbox-image img {
@@ -1531,8 +1591,9 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
 }
 
 .modal-content {
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
 }
 
 .lightbox-slider {
@@ -1608,7 +1669,7 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
   background-repeat: no-repeat;
 }
 
-#DepositForm.modal {
+.build-buy-modal.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -1623,13 +1684,13 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
   visibility: hidden;
 }
 
-#DepositForm.modal.show {
+.build-buy-modal.modal.show {
   display: flex;
   opacity: 1;
   visibility: visible;
 }
 
-#DepositForm .modal-body {
+.build-buy-modal .modal-body {
   box-shadow: 4px 4px 8px 15px #0000000D;
   padding: 32px 35px 55px;
 }
@@ -1805,6 +1866,10 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
     width: 60%;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:min-w-16 {
     min-width: 4rem;
   }
@@ -1932,6 +1997,31 @@ html.modal-open main, html.modal-open header, html.modal-open footer {
 
   .lg\:text-xl {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-64 {
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .lg\:text-27 {
+    font-size: 27px;
+    line-height: 31px;
+  }
+
+  .lg\:text-19 {
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  .lg\:text-23 {
+    font-size: 23px;
+    line-height: 26px;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }

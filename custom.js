@@ -40,61 +40,67 @@ jQuery(document).ready(function($){
   });
 
   // Handle slide click to open modal
-  $('.tab-slider').on('click', '.info-icon', function() {
-      $('html').addClass('modal-open');
-      var clickedSlideIndex = $(this).data('id') - 1; // Get the index of clicked slide
+$('.tab-slider').on('click', '.info-icon', function() {
+  $('html').addClass('modal-open');
+  var clickedSlideIndex = $(this).data('id') - 1; // Get the index of clicked slide
+  var sliderId = $(this).closest('.tab-slider').parent().attr('id'); // Get the slider wrapper ID
+  var modalId = sliderId === 'slider1' ? 'lightbox-modal-slider1' : 'lightbox-modal-slider2'; // Determine the modal ID
 
-      // Clear existing content in the modal slider
-      $('.lightbox-slider').html('');
+  // Clear existing content in the selected modal slider
+  $('#' + modalId + ' .lightbox-slider').html('');
 
-      // Clone all slides from the original slider into the modal slider
-      $('.tab-slider .slide-image').each(function(index) {
-        var imageSrc = $(this).attr('src');
-        var detailsId = $(this).siblings('.slide-details').children('.info-icon').data('id');
-        var detailsContent = $('#details-' + detailsId).html();
-          
-          // Create new slide structure
-          var slideHtml = `
-            <div class="modal-slider p-5 2xl:p-11">
+  // Clone all slides from the original slider into the selected modal slider
+  $('#' + sliderId + ' .slide-image').each(function(index) {
+      var imageSrc = $(this).attr('src');
+      var detailsId = $(this).siblings('.slide-details').children('.info-icon').data('id');
+      var detailsContent = $('#details-' + detailsId).html();
+        
+      // Create new slide structure
+      var slideHtml = `
+          <div class="modal-slider p-5 2xl:p-11">
               <div class="flex bg-white p-9 gap-6 items-center">
-                <img src="${imageSrc}" alt="Slide Image" class="w-1/2">
-                <div class="slide-details w-1/2">${detailsContent}</div>
+                  <img src="${imageSrc}" alt="Slide Image" class="w-1/2">
+                  <div class="slide-details w-1/2">${detailsContent}</div>
               </div>
-            </div>
-          `;
+          </div>
+      `;
 
-          // Append to modal slider
-          $('.lightbox-slider').append(slideHtml);
-          $('.slide-details:not(.tab-slide-content) > div').show();
-          $('.slide-details:not(.tab-slide-content) .info-icon').hide();
-      });
-
-      // Initialize Slick Slider in modal
-      $('.lightbox-slider').slick({
-        centerMode: true,
-        centerPadding: '250px',
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-          focusOnSelect: true,
-          initialSlide: clickedSlideIndex, // Center the clicked slide
-      });
-
-      // Show the modal
-      $('#lightbox-modal').show();
+      // Append to the selected modal slider
+      $('#' + modalId + ' .lightbox-slider').append(slideHtml);
+      $('.slide-details:not(.tab-slide-content) > div').show();
+      $('.slide-details:not(.tab-slide-content) .info-icon').hide();
   });
 
-  // Close modal when clicking the close button
-  $('.close').on('click', function() {
-      $('#lightbox-modal, .slide-details:not(.tab-slide-content) > div').hide();
-      $('.slide-details:not(.tab-slide-content) .info-icon').show();
-      // Destroy Slick slider inside modal to reset it for future use
-      $('.lightbox-slider').slick('unslick');
-      $('html').removeClass('modal-open');
+  // Initialize Slick Slider in the selected modal
+  $('#' + modalId + ' .lightbox-slider').slick({
+      centerMode: true,
+      centerPadding: '250px',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      focusOnSelect: true,
+      initialSlide: clickedSlideIndex, // Center the clicked slide
   });
-      
+
+  // Show the selected modal
+  $('#' + modalId).show();
 });
+
+// Close modal when clicking the close button
+$('.close').on('click', function() {
+  var modalId = $(this).closest('.modal').attr('id'); // Get the modal ID
+
+  $('#' + modalId).hide();
+  $('.slide-details:not(.tab-slide-content) > div').hide();
+  $('.slide-details:not(.tab-slide-content) .info-icon').show();
+
+  // Destroy Slick slider inside the modal to reset it for future use
+  $('#' + modalId + ' .lightbox-slider').slick('unslick');
+  $('html').removeClass('modal-open');
+});
+});
+
 
 jQuery(document).ready(function($) {
   // Initialize all tab sections
@@ -156,3 +162,21 @@ function toggleContent(event) {
       }, 300);
   }
 }
+
+// const Submitmodal = document.getElementById('SubmitDeposit');
+// const SubmitopenModal = document.getElementById('SubmitBtn');
+// const SubmitcloseModal = document.getElementById('SubmitcloseModal');
+// SubmitopenModal.addEventListener('click', () => {
+//   Submitmodal.classList.add('show');
+//     document.body.classList.add('submit-modal-open'); 
+// });
+// SubmitcloseModal.addEventListener('click', () => {
+//   Submitmodal.classList.remove('show');
+//     document.body.classList.remove('submit-modal-open');
+// });
+// window.addEventListener('click', (event) => {
+//     if (event.target === modal) {
+//       Submitmodal.classList.remove('show');
+//         document.body.classList.remove('submit-modal-open');
+//     }
+// });

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="./output.css" rel="stylesheet" />
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="images/logo.png" width="64px"></a>
+        </div>
+    </header>
+    <main>
+        <div id="BuildBuyModal" class="build-buy-modal modal fixed inset-0 flex items-center justify-center show">
+            <div class="modal-body bg-white max-w-3xl w-full">
+                <div class="flex justify-end">
+                    <button id="SubmitcloseModal" class="text-custom-black-200">X</button>
+                </div>
+                <div class="modal-content pl-6">
+                    <h2 class="text-4xl lg:text-64 text-center uppercase">BUILD + BUY</h2>
+                    <p class="text-center text-base lg:text-19 mb-14">Send Your Build Configuration</p>
+                    <h3 class="text-xl lg:text-27 font-semibold text-black self-start mb-3">Enter Email Address</h3>
+                    <p class="text-lg lg:text-23 mb-4 self-start">A build link will be sent to the address below</p>
+                    <div class="form-block w-full md:w-1/2">
+                        <div class="field-block w-full mb-4 md:mb-5">
+                            <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Email*</label>
+                            <input type="email" class="form-field w-full" placeholder="Auto Populate" name="UserEmail" required>
+                            <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                        </div>
+                    </div>
+                    <div class="form-block -ml-7">
+                        <div class="form-title flex gap-x-3 items-center cursor-pointer mb-5" onclick="toggleContent(event)">
+                            <span class="toggle-icon text-sm lg:text-lg">+</span>
+                            <h3 class="mr-2 font-semibold text-xl lg:text-27">Additional Email Address</h3>
+                        </div>
+                        <div class="form-content-detail max-h-0 overflow-hidden transition-all duration-300 ease-in-out ml-7">
+                            <div class="block md:flex gap-x-9">
+                                <div class="field-block w-full md:w-2/4 mb-4 md:mb-5">
+                                    <label class="text-custom-gray-500 text-10 font-semibold mb-2 block font-noto-sans">Email*</label>
+                                    <input type="email" class="form-field w-full" placeholder="Auto Populate" name="UserAddEmail" required>
+                                    <p class="text-custom-gray-500 text-10 mt-2 font-noto-sans">Assistive Text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex self-start items-center gap-6 mt-14">
+                        <h3 class="text-xl lg:text-27 font-semibold text-black self-start mb-3">Stay Connected</h3>
+                        <ul class="flex gap-5 items-center justify-start self-start">
+                            <li><a href="#"><img src="images/FacebookIcons.svg" class="w-8"></a></li>
+                            <li><a href="#"><img src="images/TwitterIcons.svg" class="w-8"></a></li>
+                            <li><a href="#"><img src="images/InstaIcons.svg" class="w-8"></a></li>
+                            <li><a href="#"><img src="images/LinkdinIcons.svg" class="w-8"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>
